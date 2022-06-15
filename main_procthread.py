@@ -1,5 +1,6 @@
 # Fernando Resendiz Bauitsta A01769659
-# Carlos Eduardo Jiménez Santiago A01769960
+# Jorge Omar López Gemigniani A01769675
+# Darío Mejía Castillo A01769961
 
 from fileinput import filename
 from platform import processor
@@ -473,8 +474,8 @@ if __name__ == "__main__":
     start = time.perf_counter()
 
     #crea los procesos
-    for i, files in enumerate(splited_files):
-        processes[i] = multiprocessing.Process(target=threaded_highlight, args=(files, i, start, txt_language))
+    for i, process_files in enumerate(splited_files):
+        processes[i] = multiprocessing.Process(target=threaded_highlight, args=(process_files, i, start, txt_language))
     
     #inicia los procesos
     for p in processes:
@@ -486,4 +487,5 @@ if __name__ == "__main__":
 
     finish = time.perf_counter()
 
+    print(len(files), "archivos fueron resaltados")
     print("Tiempo de ejecucion", finish - start)

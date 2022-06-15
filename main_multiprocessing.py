@@ -1,5 +1,6 @@
 # Fernando Resendiz Bauitsta A01769659
-# Carlos Eduardo Jiménez Santiago A01769960
+# Jorge Omar López Gemigniani A01769675
+# Darío Mejía Castillo A01769961
 
 from fileinput import filename
 import shutil
@@ -464,4 +465,5 @@ if __name__ == "__main__":
 
     finish = time.perf_counter()
 
+    print(len(files), "archivos fueron resaltados")
     print("Tiempo de ejecucion", finish - start)
